@@ -1,0 +1,597 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: crimson;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 30px;
+}
+body {
+  font-size: 1.2rem;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 8rem;
+  margin: auto;
+}
+.nav-bar {
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2rem;
+  background: #111;
+  color: #fff;
+  padding: 2rem 0;
+}
+.nav-bar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  padding: 1rem 0;
+}
+.nav-bar .logo a {
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-bar .logo a span {
+  color: crimson;
+  transition: all 0.3s ease;
+}
+.nav-bar-items {
+  display: inline-block;
+}
+.nav-bar-item {
+  list-style: none;
+  padding: 1rem;
+  display: inline-block;
+}
+.nav-bar-item a {
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.nav-bar-item a:hover {
+  color: crimson;
+}
+
+.menu-btn {
+  display: none;
+}
+.menu-btn a {
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: none;
+}
+.menu-btn a:hover {
+  color: crimson;
+}
+
+section {
+  font-family: "Ubuntu", sans-serif;
+}
+.home-section,
+.project-section,
+.about {
+  color: #fff;
+  background: #111;
+}
+.home {
+  display: flex;
+  font-family: "Ubuntu", sans-serif;
+  padding: 6rem 0 11rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.photo img {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+.home-content {
+  width: 60%;
+}
+.home-content button a{
+  color: #fff;
+  text-decoration: none;
+}
+.home .text-1 {
+  font-size: 1.2rem;
+}
+.home .text-2 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 0.8rem 0;
+}
+.home-content button {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 12px 16px;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.home-content button:hover {
+  color: crimson;
+  background: none;
+}
+.mini-texts {
+  display: flex;
+  justify-content: space-between;
+}
+.mini-text a {
+  color: #fff;
+}
+.mini-text a:hover {
+  color: crimson;
+}
+
+/* PROJECT SECTION */
+
+.project-section {
+  padding: 5rem 0;
+}
+.project {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 1rem;
+  background: #222;
+  margin-bottom: 2.5rem;
+  border-radius: 6px;
+  font-weight: 300;
+}
+
+.project-image img {
+  height: 200px;
+  width: 350px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+}
+.project-content h2 {
+  margin-bottom: 1rem;
+
+}
+.project-content p {
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.project-content a {
+  color: rgb(151, 77, 92);
+  font-size: 1rem;
+}
+.max-width h1 {
+  margin: 1rem 0;
+}
+.max-width > p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  position: relative;
+}
+.max-width > p::after {
+  content: "";
+  height: 2px;
+  bottom: -10px;
+  background: crimson;
+  position: absolute;
+  width: 3rem;
+  left: 0;
+  right: 0;
+}
+
+.max-width > a:hover {
+  color: crimson;
+  background: none;
+}
+
+.about,
+.contact-me {
+  color: #fff;
+  background: #111;
+  padding: 1rem 0;
+}
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-image img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 2rem;
+  object-position: top;
+}
+.about-text {
+  text-align: justify;
+  font-size: 1rem;
+  max-width: 50%;
+  line-height: 1.5;
+}
+.icons {
+  margin-top: 3rem;
+}
+.icon-1 {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 4rem 0;
+}
+.my-skills {
+  color: #fff;
+  background: #111;
+  padding: 5rem 0;
+}
+
+.contact-content {
+  width: 50%;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.icon-2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+footer {
+  background: #111;
+  padding: 20px 23px;
+  color: #fff;
+  text-align: center;
+  padding-top: 10rem;
+}
+footer span a {
+  color: crimson;
+  text-decoration: none;
+}
+
+footer span a:hover {
+  text-decoration: underline;
+}
+
+/* responsive media query start*/
+@media (max-width: 1181px) {
+  .max-width {
+    max-width: 1300px;
+    padding: 0 5rem;
+    margin: auto;
+  }
+  .nav-bar {
+    padding-top: 1rem;
+  }
+  .home {
+    padding: 2rem 0 5rem 0;
+  }
+  .photo img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+  .about-image img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+  .home .text-2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    padding: 0.8rem 0;
+  }
+}
+@media (max-width: 910px) {
+  .max-width {
+    max-width: 1300px;
+    padding: 0 4rem;
+    margin: auto;
+  }
+  .nav-bar {
+    padding-top: 1rem;
+  }
+
+  .photo img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+  /* .about-image img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  } */
+  .home .text-2 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    padding: 0.8rem 0;
+  }
+  .home-content button {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+    margin-top: 0;
+  }
+  .about-content {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about-text {
+    text-align: justify;
+    font-size: 1rem;
+    max-width: 100%;
+    line-height: 1.5;
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    background: #222;
+    margin-bottom: 2.5rem;
+    border-radius: 6px;
+    font-weight: 300;
+  }
+
+  .project-content p {
+    line-height: 1.5;
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .project-image img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+  }
+  .icon-1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+  }
+  .icon-1 img {
+    width: 75px;
+    height: 75px;
+  }
+  /* .about-image {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 2rem 0;
+  }
+  .about-image img {
+    width: 100%;
+    margin: 0;
+    border-radius: 12px;
+    object-fit: cover;
+  } */
+  .about-image {
+    width: auto;
+  }
+  .about-image img {
+    height: 350px;
+    width: 350px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 2rem auto;
+    object-position: top;
+  }
+  .contact-content {
+    width: 100%;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+  .icon-2 {
+    display: flex;
+    justify-content: start;
+    margin: 2rem 0;
+  }
+  .icon-2 img {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .max-width {
+    padding: 0 2rem;
+    margin: auto;
+  }
+  body {
+    font-size: 1rem;
+  }
+  .nav-bar-items {
+    display: none;
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    font-family: "Ubuntu", sans-serif;
+    padding: 2rem 0 5rem 0;
+    width: 100%;
+    justify-content: start;
+    text-align: left;
+  }
+  .home .text-1 {
+    font-size: 1rem;
+  }
+  .home .text-2 {
+    font-size: 2.2rem;
+    padding: 2rem 0;
+  }
+  .photo {
+    width: auto;
+  }
+  .photo img {
+    height: 350px;
+    width: 350px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 2rem auto;
+    object-position: top;
+  }
+  .about-image {
+    width: auto;
+  }
+  .about-image img {
+    height: 350px;
+    width: 350px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 2rem auto;
+    object-position: top;
+  }
+  .home-content {
+    width: 100%;
+  }
+  .icon-1 img {
+    width: 75px;
+    height: 75px;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .menu-btn a {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: block;
+  }
+  .mini-texts {
+    display: flex;
+    flex-direction: column;
+  }
+  .mini-text {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .max-width {
+    padding: 0 2rem;
+    margin: auto;
+  }
+  body {
+    font-size: 1rem;
+  }
+  .nav-bar .logo a {
+    font-size: 2rem;
+  }
+  .nav-bar-items {
+    display: none;
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    font-family: "Ubuntu", sans-serif;
+    padding: 2rem 0 5rem 0;
+    width: 100%;
+    justify-content: start;
+    text-align: left;
+  }
+  .home .text-1 {
+    font-size: 1rem;
+  }
+  .home .text-2 {
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+  .photo {
+    width: auto;
+  }
+  .photo img {
+    height: 300px;
+    width: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 2rem auto;
+    object-position: top;
+  }
+  .home-content {
+    width: 100%;
+  }
+  .icon-1 img {
+    width: 50px;
+    height: 50px;
+  }
+  .menu-btn a {
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+    z-index: 999;
+  }
+  .mini-texts {
+    display: flex;
+    flex-direction: column;
+  }
+  .mini-text {
+    margin-top: 1rem;
+  }
+  .about-image {
+    width: auto;
+  }
+  .about-image img {
+    height: 300px;
+    width: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 2rem auto;
+    object-position: top;
+  }
+}
